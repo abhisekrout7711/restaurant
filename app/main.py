@@ -28,7 +28,9 @@ app = FastAPI(title="Restaurant Delivery API")
 @app.on_event("startup")
 def startup_event():
     # Load CSV data at startup.
-    load_csv_data()
+    global restaurants, spatial_index
+    restaurants, spatial_index = load_csv_data()
+    
     # Start background thread to reload CSV data periodically.
     thread = threading.Thread(target=csv_reload_daemon, daemon=True)
     thread.start()
