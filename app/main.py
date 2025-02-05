@@ -50,7 +50,6 @@ def query_restaurants(
     candidate_ids = list(csv_loader_ins.spatial_index.intersection((longitude, latitude, longitude, latitude)))
     
     matching_ids = []
-    now = datetime.now(timezone.utc).time()
 
     for restaurant_id in candidate_ids:
         restaurant: Restaurant = csv_loader_ins.restaurants.get(restaurant_id)
@@ -62,7 +61,7 @@ def query_restaurants(
         
         if distance <= restaurant.availability_radius:
             # Check if open now.
-            if is_open_now(restaurant, now):
+            if is_open_now(restaurant):
                 matching_ids.append(restaurant.id)
 
     return {"restaurant_ids": matching_ids}
