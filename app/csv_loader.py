@@ -3,10 +3,10 @@ import csv
 import io
 import time
 from datetime import datetime, timezone
-from rtree import index
 
 # Third-Party Imports
 import requests
+from rtree import index
 
 # Local Imports
 from app.config import CSV_URL, CSV_UPDATE_INTERVAL_SECONDS
@@ -42,7 +42,7 @@ class CSVLoader:
 
         new_restaurants = {}
         # Create a new spatial index (we cannot easily remove all items from an rtree)
-        new_index = index.Index()
+        new_spatial_index = index.Index()
 
         for idx, row in enumerate(csv_reader):
             try:
@@ -51,7 +51,7 @@ class CSVLoader:
 
                 # Compute bounding box for the restaurant based on its delivery radius.
                 bbox = get_bounding_box(restaurant.latitude, restaurant.longitude, restaurant.availability_radius)
-                new_index.insert(restaurant.id, bbox)
+                new_spatial_index.insert(restaurant.id, bbox)
 
             except Exception as e:
                 print(f"Error parsing row {idx}: {e}")
@@ -59,7 +59,7 @@ class CSVLoader:
         
         # Update the instance variables
         self.restaurants = new_restaurants
-        self.spatial_index = new_index
+        self.spatial_index = new_spatial_index
 
         print(f"[{datetime.now(timezone.utc)}] Loaded {len(self.restaurants)} restaurants.")
 
@@ -69,6 +69,10 @@ class CSVLoader:
             self.load_csv_data()
             time.sleep(CSV_UPDATE_INTERVAL_SECONDS)
 
-if __name__ == "__main__":
-    csv_loader_ins = CSVLoader()
-    csv_loader_ins.load_csv_data()
+# if __name__ == "__main__":
+#     csv_loader_ins = CSVLoader()
+#     csv_loader_ins.load_csv_data()
+
+#     import threading
+#     thread = threading.Thread(target=csv_loader_ins.csv_reload_daemon, daemon=True)
+#     thread.start()
