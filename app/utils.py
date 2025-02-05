@@ -1,22 +1,23 @@
 # Standard Imports
 import math
-from datetime import datetime, timezone
+from datetime import datetime, timezone, time as dtime
 from typing import Optional
 
 # Local Imports
 from app.models import Restaurant
 
 
-def is_open_now(restaurant: Restaurant, now: Optional[datetime] = None) -> bool:
+def is_open_now(restaurant: Restaurant, now: Optional[dtime] = None) -> bool:
     """
     Check if restaurant is currently within its delivery hours.
     Assumption: Open and Close times refer to the same day.
     """
-    now = now or datetime.now(timezone.utc)
-    current_time = now.time()
+    now = now or datetime.now(timezone.utc).time()
 
     if restaurant.open_hour <= restaurant.close_hour:
-        return restaurant.open_hour <= current_time <= restaurant.close_hour
+        return restaurant.open_hour <= now <= restaurant.close_hour
+    
+    return False
     
 
 def haversine_distance(lat1, lon1, lat2, lon2):

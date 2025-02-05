@@ -1,38 +1,31 @@
 # Standard Imports
 import threading
 from datetime import datetime, timezone
-from typing import Dict
 
 # Third-Party Imports
 from fastapi import FastAPI, Query
 from fastapi.responses import JSONResponse
-from rtree import index
 import uvicorn
 
 # Local Imports
 from app.models import Restaurant
 from app.utils import is_open_now, haversine_distance
-from app.csv_loader import load_csv_data, csv_reload_daemon
-
-
-# Global dictionaries: restaurant id -> Restaurant object.
-restaurants: Dict[int, Restaurant] = {}
-
-# Rtree spatial index. We index by a bounding box computed from the restaurant’s location and delivery radius.
-spatial_index = index.Index()
+from app.csv_loader import CSVLoader
 
 
 app = FastAPI(title="Restaurant Delivery API")
 
+# Global Singleton Instance of CSVLoader
+csv_loader_ins = CSVLoader()
+
 
 @app.on_event("startup")
 def startup_event():
-    # Load CSV data at startup.
-    global restaurants, spatial_index
-    restaurants, spatial_index = load_csv_data()
+    # Load CSV data at startup
+    csv_loader_ins.load_csv_data()
     
-    # Start background thread to reload CSV data periodically.
-    thread = threading.Thread(target=csv_reload_daemon, daemon=True)
+    # Start background thread to reload CSV data periodically
+    thread = threading.Thread(target=csv_loader_ins.csv_reload_daemon, daemon=True)
     thread.start()
 
 
@@ -54,13 +47,13 @@ def query_restaurants(
     """
 
     # For performance, query the spatial index to get candidate restaurants.
-    candidate_ids = list(spatial_index.intersection((longitude, latitude, longitude, latitude)))
+    candidate_ids = list(csv_loader_ins.spatial_index.intersection((longitude, latitude, longitude, latitude)))
     
     matching_ids = []
-    now = datetime.now(timezone.utc)
+    now = datetime.now(timezone.utc).time()
 
-    for rest_id in candidate_ids:
-        restaurant = restaurants.get(rest_id)
+    for restaurant_id in candidate_ids:
+        restaurant: Restaurant = csv_loader_ins.restaurants.get(restaurant_id)
         if restaurant is None:
             continue
 
