@@ -66,13 +66,5 @@ class CSVLoader:
     def csv_reload_daemon(self):
         """Thread that reloads the CSV file periodically."""
         while True:
-            self.load_csv_data()
             time.sleep(CSV_UPDATE_INTERVAL_SECONDS)
-
-# if __name__ == "__main__":
-#     csv_loader_ins = CSVLoader()
-#     csv_loader_ins.load_csv_data()
-
-#     import threading
-#     thread = threading.Thread(target=csv_loader_ins.csv_reload_daemon, daemon=True)
-#     thread.start()
+            self.load_csv_data()
