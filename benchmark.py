@@ -17,7 +17,7 @@ API_URL = "http://0.0.0.0:8080/restaurants"
 
 def api_response_benchmark(latitude: float, longitude: float, n: int = 100):
     """
-    Benchmark the time taken to fetch the API response from the given coordinates.
+    Benchmark the time taken to fetch the API response for the given coordinates.
     Make n requests to the API and log the statistics of the times taken.
     """
     times = []
@@ -36,7 +36,7 @@ def api_response_benchmark(latitude: float, longitude: float, n: int = 100):
 
     # Log benchmark results
     stats = get_statistics(times)
-    logger.info(f"Made {n} synchronous api requests")
+    logger.info(f"Statistic for {n} api requests")
     logger.info(f"Mean response time: {stats["mean"]:.2f} ms")
     logger.info(f"Median response time: {stats["median"]:.2f} ms")
     logger.info(f"Mode response time: {stats["mode"]:.2f} ms")
@@ -47,12 +47,7 @@ def api_response_benchmark(latitude: float, longitude: float, n: int = 100):
 def csv_loader_benchmark(n: int = 100):
     """
     Benchmark the time taken to load the CSV file and populate the restaurants and spatial index.
-
-    The function loads the CSV file, populates the restaurants and spatial index, and measures the time taken.
-    This is done n times, and the statistics of the times are logged.
-
-    Parameters:
-    n (int): Number of times to call the function. Default is 100.
+    Make n calls to load_csv_data and log the statistics of the times taken.
     """
     times = []
     for _ in range(n):
@@ -65,7 +60,7 @@ def csv_loader_benchmark(n: int = 100):
 
     # Log benchmark results
     stats = get_statistics(times)
-    logger.info(f"Called function=load_csv_data {n} times")
+    logger.info(f"Statistics for {n} <function=load_csv_data> calls")
     logger.info(f"Mean CSV Load time: {stats["mean"]:.2f} ms")
     logger.info(f"Median CSV Load time: {stats["median"]:.2f} ms")
     logger.info(f"Mode CSV Load time: {stats["mode"]:.2f} ms")
