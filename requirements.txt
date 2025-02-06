@@ -4,3 +4,5 @@ requests
 pydantic
 shapely
 Rtree
+pytest
+httpx
