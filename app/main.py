@@ -1,6 +1,7 @@
 # Standard Imports
 import threading
 from datetime import datetime, timezone
+from contextlib import asynccontextmanager
 
 # Third-Party Imports
 from fastapi import FastAPI, Query
@@ -13,20 +14,24 @@ from app.utils import is_open_now, haversine_distance
 from app.csv_loader import CSVLoader
 
 
-app = FastAPI(title="Restaurant Delivery API")
-
 # Global Singleton Instance of CSVLoader
 csv_loader_ins = CSVLoader()
 
-
-@app.on_event("startup")
-def startup_event():
-    # Load CSV data at startup
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # Load CSV data to memory at startup
+    csv_loader_ins = CSVLoader()
     csv_loader_ins.load_csv_data()
-    
+
     # Start background thread to reload CSV data periodically
     thread = threading.Thread(target=csv_loader_ins.csv_reload_daemon, daemon=True)
     thread.start()
+
+    yield
+
+
+# Initialize FastAPI with lifespan
+app = FastAPI(title="Restaurant Delivery API", lifespan=lifespan)
 
 
 @app.get("/")
@@ -46,7 +51,7 @@ def query_restaurants(
       - The current time is within the restaurant's open/close hours.
     """
 
-    # For performance, query the spatial index to get candidate restaurants.
+    # For performance, query the spatial index to get candidate restaurants
     candidate_ids = list(csv_loader_ins.spatial_index.intersection((longitude, latitude, longitude, latitude)))
     
     matching_ids = []
@@ -60,7 +65,7 @@ def query_restaurants(
         distance = haversine_distance(latitude, longitude, restaurant.latitude, restaurant.longitude)
         
         if distance <= restaurant.availability_radius:
-            # Check if open now.
+            # Check if open now
             if is_open_now(restaurant):
                 matching_ids.append(restaurant.id)
 
