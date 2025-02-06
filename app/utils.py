@@ -2,7 +2,7 @@
 import math
 import time
 from datetime import datetime, timezone, time as dtime
-from typing import Optional
+from typing import Optional, Callable, Any, Tuple
 from functools import wraps
 import statistics
 
@@ -29,9 +29,9 @@ def is_open_now(restaurant: Restaurant, now: Optional[dtime] = None) -> bool:
     return False
     
 
-def haversine_distance(lat1: float, lon1: float, lat2: float, lon2: float):
+def haversine_distance(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
     """Calculate the great circle distance (in km) between two points on Earth."""
-    R = 6371  # Earth radius in km
+    R = 6371  # Earth's radius in km
     dlat = math.radians(lat2 - lat1)
     dlon = math.radians(lon2 - lon1)
     a = (
@@ -44,7 +44,7 @@ def haversine_distance(lat1: float, lon1: float, lat2: float, lon2: float):
     return R * c
 
 
-def get_bounding_box(lat: float, lon: float, radius_km: float):
+def get_bounding_box(lat: float, lon: float, radius_km: float) -> Tuple[float, float, float, float]:
     """
     Return bounding box (minx, miny, maxx, maxy) for a circle around (lat, lon)
     Note: we approximate 1 degree latitude ~111 km and adjust longitude by cos(latitude).
@@ -54,7 +54,7 @@ def get_bounding_box(lat: float, lon: float, radius_km: float):
     return (lon - delta_lon, lat - delta_lat, lon + delta_lon, lat + delta_lat)
 
 
-def time_it(func):
+def time_it(func: Callable[..., Any]) -> Callable[..., Any]:
     """Decorator to measure the execution time of a function in milliseconds, and log the result."""
     @wraps(func)
     def wrapper(*args, **kwargs):
@@ -70,7 +70,7 @@ def time_it(func):
     return wrapper
 
 
-def get_statistics(times: list[float]):
+def get_statistics(times: list[float]) -> dict:
     """
     Calculate the mean, median, mode, min, and max of a list of floats (usecase: execution time in milliseconds),
     and return a dictionary of the computed mean, median, mode, min, and max.

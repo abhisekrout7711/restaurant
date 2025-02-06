@@ -14,13 +14,13 @@ from app.utils import get_bounding_box
 client = TestClient(app)
 
 
-def test_root():
+def test_root() -> None:
     response = client.get("/")
     assert response.status_code == 200
     assert response.json() == {"message": "service up!"}
 
 
-def test_query_restaurants_no_results(monkeypatch):
+def test_query_restaurants_no_results(monkeypatch) -> None:
     # Create a dummy CSV loader instance with restaurants = {} and spatial_index = index.Index()
     class DummyLoader:
         pass
@@ -38,7 +38,7 @@ def test_query_restaurants_no_results(monkeypatch):
     assert response.json() == {"restaurant_count": 0, "restaurant_ids": []}
 
 
-def test_query_restaurants_with_result(monkeypatch):
+def test_query_restaurants_with_result(monkeypatch) -> None:
     # Create a dummy CSV loader instance with restaurants = {} and spatial_index = index.Index()
     class DummyLoader:
         pass

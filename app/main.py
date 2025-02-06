@@ -34,12 +34,13 @@ app = FastAPI(title="Restaurant Delivery API", lifespan=lifespan)
 
 
 @app.get("/")
-def root():
+def root() -> dict:
+    """Returns a message indicating the service is up and running."""
     return {"message": "service up!"}
 
 
 @lru_cache(maxsize=1000)
-def get_cached_response(latitude: float, longitude: float):
+def get_cached_response(latitude: float, longitude: float) -> dict:
     """
     Returns a list of restaurant IDs that can deliver to the user's location.
     Implements caching to improve performance.

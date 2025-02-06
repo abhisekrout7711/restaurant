@@ -9,7 +9,10 @@ LOGGER_LEVEL = logging.DEBUG
 LOGGER_LEVEL_CONSOLE = logging.DEBUG
 LOGGER_LEVEL_FILE = logging.INFO
 
-LOGGER_FORMATTER = logging.Formatter('%(asctime)s [%(levelname)s] %(name)s: %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
+LOGGER_FORMATTER = logging.Formatter(
+    '%(asctime)s [%(levelname)s] %(name)s: %(message)s', 
+    datefmt='%Y-%m-%d %H:%M:%S'
+)
 
 
 class CustomLogger:

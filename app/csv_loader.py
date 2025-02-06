@@ -30,7 +30,7 @@ class CSVLoader:
         return cls.__instance
 
     @time_it
-    def load_csv_data(self):
+    def load_csv_data(self) -> None:
         """Load the CSV file from the URL and update the restaurants and spatial_index instance variables."""
         try:
             response = requests.get(CSV_URL)
@@ -66,7 +66,7 @@ class CSVLoader:
 
         logger.info(f"Loaded {len(self.restaurants)} restaurants")
 
-    def csv_reload_daemon(self):
+    def csv_reload_daemon(self) -> None:
         """Thread that reloads the CSV file periodically."""
         while True:
             time.sleep(CSV_UPDATE_INTERVAL_SECONDS)
