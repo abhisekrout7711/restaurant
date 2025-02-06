@@ -1,12 +1,12 @@
 # Standard Imports
 import time
-import statistics
 
 # Third-Party Imports
 import requests
 
 # Local Imports
 from app.logger import CustomLogger
+from app.utils import get_statistics
 
 logger = CustomLogger.get_logger(name="benchmark")
 
@@ -15,7 +15,7 @@ API_URL = "http://0.0.0.0:8080/restaurants"
 def run_benchmark(latitude: float, longitude: float, n: int = 100):
     times = []
     params = {"latitude": latitude, "longitude": longitude}
-    # Warm-up
+
     requests.get(API_URL, params=params)
     for _ in range(n):
         start = time.perf_counter()
@@ -28,12 +28,13 @@ def run_benchmark(latitude: float, longitude: float, n: int = 100):
             logger.error("Error in request:", response.status_code)
 
     # Log benchmark results
+    stats = get_statistics(times)
     logger.info(f"Performed {n} requests.")
-    logger.info(f"Mean response time: {statistics.mean(times):.2f} ms")
-    logger.info(f"Median response time: {statistics.median(times):.2f} ms")
-    logger.info(f"Mode response time: {statistics.mode(times):.2f} ms")
-    logger.info(f"Min response time: {min(times):.2f} ms")
-    logger.info(f"Max response time: {max(times):.2f} ms")
+    logger.info(f"Mean response time: {stats["mean"]:.2f} ms")
+    logger.info(f"Median response time: {stats["median"]:.2f} ms")
+    logger.info(f"Mode response time: {stats["mode"]:.2f} ms")
+    logger.info(f"Min response time: {stats["min"]:.2f} ms")
+    logger.info(f"Max response time: {stats["max"]:.2f} ms")
 
 
 if __name__ == "__main__":

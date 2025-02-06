@@ -4,6 +4,7 @@ import time
 from datetime import datetime, timezone, time as dtime
 from typing import Optional
 from functools import wraps
+import statistics
 
 # Local Imports
 from app.models import Restaurant
@@ -54,6 +55,7 @@ def get_bounding_box(lat: float, lon: float, radius_km: float):
 
 
 def time_it(func):
+    """Decorator to measure the execution time of a function in milliseconds, and log the result."""
     @wraps(func)
     def wrapper(*args, **kwargs):
         start_time = time.perf_counter()
@@ -66,3 +68,17 @@ def time_it(func):
         return result
     
     return wrapper
+
+
+def get_statistics(times: list[float]):
+    """
+    Calculate the mean, median, mode, min, and max of a list of floats (usecase: execution time in milliseconds),
+    and return a dictionary of the computed mean, median, mode, min, and max.
+    """
+    return {
+        "mean": statistics.mean(times),
+        "median": statistics.median(times),
+        "mode": statistics.mode(times),
+        "min": min(times),
+        "max": max(times),
+    }
