@@ -7,6 +7,7 @@ from datetime import datetime, timezone
 # Third-Party Imports
 import requests
 from rtree import index
+from fastapi import HTTPException
 
 # Local Imports
 from app.config import CSV_URL, CSV_UPDATE_INTERVAL_SECONDS
@@ -38,8 +39,9 @@ class CSVLoader:
             csv_reader = csv.DictReader(io.StringIO(content))
         
         except Exception as e:
-            logger.error(f"Error fetching CSV from {CSV_URL}: {e}")
-            return
+            error_msg = f"Error fetching CSV from {CSV_URL}: {e}"
+            logger.error(error_msg)
+            raise HTTPException(status_code=500, detail=error_msg)
 
         new_restaurants = {}
         # Create a new spatial index (we cannot easily remove all items from an rtree)
