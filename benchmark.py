@@ -12,7 +12,7 @@ from app.utils import get_statistics
 
 logger = CustomLogger.get_logger(name="benchmark")
 
-API_URL = "http://0.0.0.0:8080/restaurants"
+API_URL = "http://0.0.0.0:8000/restaurants"
 
 
 def api_response_benchmark(latitude: float, longitude: float, n: int = 100):
@@ -70,22 +70,11 @@ def csv_loader_benchmark(n: int = 100):
 
 if __name__ == "__main__":
     # Benchmark api response time with sample coordinates for syncronous requests
-    api_response_benchmark(latitude=51.14, longitude=6.451, n=50000)
+    api_response_benchmark(latitude=51.14, longitude=6.451, n=20000)
     print("\n")
-    api_response_benchmark(latitude=51.145, longitude=6.45, n=20000)
+    api_response_benchmark(latitude=51.145, longitude=6.45, n=50000)
     print("\n")
     api_response_benchmark(latitude=51.1461, longitude=6.4510, n=100000)
-    # print("\n")
-    # api_response_benchmark(latitude=51.13756818172762, longitude=6.459270183225865, n=100)
-    # print("\n")
-    # api_response_benchmark(latitude=51.14308790449917, longitude=6.448960987905538, n=2000)
-    # print("\n")
-    # api_response_benchmark(latitude=51.146114515692084, longitude=6.458783165372077, n=5000)
-    # print("\n")
-    # api_response_benchmark(latitude=51.155634911736605, longitude=6.455252345087498, n=10000)
-    # print("\n")
-    # api_response_benchmark(latitude=51.13611075535575, longitude=6.44490406101732, n=20)
 
-
-    # # Benchmark CSV loader time
-    # csv_loader_benchmark(n=100)
+    # Benchmark CSV loader time
+    csv_loader_benchmark(n=100)
