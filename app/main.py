@@ -64,7 +64,7 @@ def query_restaurants(
             if is_open_now(restaurant):
                 matching_ids.append(restaurant.id)
 
-    return {"restaurant_ids": matching_ids}
+    return {"restaurant_count": len(matching_ids), "restaurant_ids": matching_ids}
 
 
 if __name__ == "__main__":
