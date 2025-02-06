@@ -13,6 +13,9 @@ def is_open_now(restaurant: Restaurant, now: Optional[dtime] = None) -> bool:
     Assumption: Open and Close times refer to the same day.
     """
     now = now or datetime.now(timezone.utc).time()
+    
+    # Set now to 1pm for local testing
+    # now = datetime(2025, 2, 6, 13, 0, 0, tzinfo=timezone.utc).time()
 
     if restaurant.open_hour <= restaurant.close_hour:
         return restaurant.open_hour <= now <= restaurant.close_hour
@@ -20,7 +23,7 @@ def is_open_now(restaurant: Restaurant, now: Optional[dtime] = None) -> bool:
     return False
     
 
-def haversine_distance(lat1, lon1, lat2, lon2):
+def haversine_distance(lat1: float, lon1: float, lat2: float, lon2: float):
     """Calculate the great circle distance (in km) between two points on Earth."""
     R = 6371  # Earth radius in km
     dlat = math.radians(lat2 - lat1)
