@@ -14,17 +14,16 @@ from app.utils import is_open_now, haversine_distance
 from app.csv_loader import CSVLoader
 
 
-# Global Singleton Instance of CSVLoader
-csv_loader_ins = CSVLoader()
-
 @asynccontextmanager
 async def lifespan(app: FastAPI):
+    # Global Singleton Instance of CSVLoader
+    app.state.csv_loader_ins = CSVLoader()
+
     # Load CSV data to memory at startup
-    csv_loader_ins = CSVLoader()
-    csv_loader_ins.load_csv_data()
+    app.state.csv_loader_ins.load_csv_data()
 
     # Start background thread to reload CSV data periodically
-    thread = threading.Thread(target=csv_loader_ins.csv_reload_daemon, daemon=True)
+    thread = threading.Thread(target=app.state.csv_loader_ins.csv_reload_daemon, daemon=True)
     thread.start()
 
     yield
@@ -52,12 +51,12 @@ def query_restaurants(
     """
 
     # For performance, query the spatial index to get candidate restaurants
-    candidate_ids = list(csv_loader_ins.spatial_index.intersection((longitude, latitude, longitude, latitude)))
+    candidate_ids = list(app.state.csv_loader_ins.spatial_index.intersection((longitude, latitude, longitude, latitude)))
     
     matching_ids = []
 
     for restaurant_id in candidate_ids:
-        restaurant: Restaurant = csv_loader_ins.restaurants.get(restaurant_id)
+        restaurant: Restaurant = app.state.csv_loader_ins.restaurants.get(restaurant_id)
         if restaurant is None:
             continue
 
