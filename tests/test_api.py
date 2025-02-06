@@ -1,12 +1,15 @@
-import time
+# Standard Imports
 from datetime import datetime, timezone, timedelta
+
+# Third-Party Imports
 from rtree import index
-import pytest
 from fastapi.testclient import TestClient
 
+# Local Imports
 from app.main import app
 from app.models import Restaurant
 from app.utils import get_bounding_box
+
 
 client = TestClient(app)
 
