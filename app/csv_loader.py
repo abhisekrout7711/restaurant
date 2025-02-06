@@ -12,8 +12,9 @@ from rtree import index
 from app.config import CSV_URL, CSV_UPDATE_INTERVAL_SECONDS
 from app.models import Restaurant
 from app.utils import get_bounding_box
+from app.logger import CustomLogger
 
-
+logger = CustomLogger.get_logger()
 
 class CSVLoader:
     __instance = None
@@ -37,7 +38,7 @@ class CSVLoader:
             csv_reader = csv.DictReader(io.StringIO(content))
         
         except Exception as e:
-            print(f"Error loading CSV from {CSV_URL}: {e}")
+            logger.error(f"Error fetching CSV from {CSV_URL}: {e}")
             return
 
         new_restaurants = {}
@@ -54,14 +55,14 @@ class CSVLoader:
                 new_spatial_index.insert(restaurant.id, bbox)
 
             except Exception as e:
-                print(f"Error parsing row {idx}: {e}")
+                logger.warning(f"Error parsing row {idx}: {e}")
                 continue
         
         # Update the instance variables
         self.restaurants = new_restaurants
         self.spatial_index = new_spatial_index
 
-        print(f"[{datetime.now(timezone.utc)}] Loaded {len(self.restaurants)} restaurants.")
+        logger.info(f"Loaded {len(self.restaurants)} restaurants.")
 
     def csv_reload_daemon(self):
         """Thread that reloads the CSV file periodically."""
