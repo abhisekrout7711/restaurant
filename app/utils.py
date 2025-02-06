@@ -63,7 +63,7 @@ def time_it(func):
         end_time = time.perf_counter()
         
         elapsed_time = (end_time - start_time) * 1000
-        logger.info(f"Execution finished: function={func.__name__} | duration={elapsed_time} ms")
+        logger.info(f"Execution finished: function={func.__name__} | duration={elapsed_time:.2f} ms")
         
         return result
     
