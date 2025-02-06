@@ -1,0 +1,10 @@
+# Bytecode files
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+restaurant_env/
+
+# Log Files
+*.log
