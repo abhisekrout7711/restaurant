@@ -64,7 +64,7 @@ class CSVLoader:
         self.restaurants = new_restaurants
         self.spatial_index = new_spatial_index
 
-        logger.info(f"Loaded {len(self.restaurants)} restaurants.")
+        logger.info(f"Loaded {len(self.restaurants)} restaurants")
 
     def csv_reload_daemon(self):
         """Thread that reloads the CSV file periodically."""
