@@ -19,7 +19,7 @@ async def lifespan(app: FastAPI):
     # Global Singleton Instance of CSVLoader
     app.state.csv_loader_ins = CSVLoader()
 
-    # Load CSV data to memory at startup
+    # Load CSV data to memory at startup and update restaurants and spatial_index in csv_loader_ins
     app.state.csv_loader_ins.load_csv_data()
 
     # Start background thread to reload CSV data periodically
