@@ -78,51 +78,74 @@ OR
 
 ### Run Tests
 To run tests for the API, use the following command:
-    ```
-    pytest tests/test_api.py
-    ```
+
+```bash
+pytest tests/test_api.py
+```
 
 ### Run Benchmarks
 To run the benchmarks, execute the `benchmark.py` script. This script measures the time taken to fetch API responses for various numbers of requests and logs the statistics of the times taken to `app.log` file.
-    ```bash
-    python benchmark.py
-    ```
+
+```bash
+python benchmark.py
+```
 - [Benchmark Results](#benchmark-results)
 
 ## Docker Setup
 
 ### Build and Start in Development Mode with Hot-Reload
 To start the application in development mode with hot-reload, use the following command:
-    ```bash
-    docker-compose up restaurant-api
-    ```
+
+```bash
+docker-compose up restaurant-api
+```
 This will build and run the Docker container, allowing you to make changes and see them reflected immediately.
 
 ### Run Tests
 To run tests within the Docker container, use the following command:
-    ```bash
-    docker-compose run --rm tests
-    ```
+
+```bash
+docker-compose run --rm tests
+```
 This will execute the tests and remove the container once the tests are finished.
 
 ### Production Build (Without Hot-Reload)
 For a production build, without hot-reload, you can build and run the Docker container with the following commands:
-    ```bash
-    docker build -t restaurant-api .
-    ```
-    ```bash
-    docker run -d -p 8000:8000 restaurant-api
-    ```
+
+```bash
+docker build -t restaurant-api .
+```
+
+```bash
+docker run -d -p 8000:8000 restaurant-api
+```
 This will build the Docker image and start the application in a detached mode on port 8000.
 
+### Containers currently running
+```bash
+docker ps
+```
+
 ### Stop Server
-To stop the server
-    ```bash
-    docker stop 065d244716e0ff6848ce38fb2f1e20e67616384783b5a47a7d8fe151fceb5686
-    ```
+```bash
+docker stop d3e6a5ecd080
+```
 
-Replace `065d244716e0ff6848ce38fb2f1e20e67616384783b5a47a7d8fe151fceb5686` with your container-id
+Replace `d3e6a5ecd080` with your container id
 
+### Logs of a container (running or stopped)
+```bash
+docker logs d3e6a5ecd080
+```
+
+Replace `d3e6a5ecd080` with your container id
+
+### Log to file
+In order to log to `app.log` while running the server within the container, use the following command:
+
+```bash
+docker run -d -p 8000:8000 -v /Users/abhisekrout/Desktop/restaurant/app.log:/app/app.log restaurant-api
+```
 
 ## API Endpoints
 
