@@ -5,3 +5,6 @@ __pycache__/
 
 # Virtual environment
 restaurant_env/
+
+# Log Files
+*.log
