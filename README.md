@@ -63,6 +63,7 @@ Built with FastAPI, this high-performance API ensures quick responses and includ
 ### Run Server
 
 1. Execute `app/main.py`
+
     ```bash
     python app/main.py
     ```
@@ -70,18 +71,18 @@ Built with FastAPI, this high-performance API ensures quick responses and includ
 OR
 
 2. Using uvicorn
+
     ```bash
     uvicorn app.main:app --reload
     ```
 
 ### Run Tests
-    
-    ```bash
-    pytest tests/test_api.py  
+To run tests for the API, use the following command:
+    ```
+    pytest tests/test_api.py
     ```
 
 ### Run Benchmarks
-
 To run the benchmarks, execute the `benchmark.py` script. This script measures the time taken to fetch API responses for various numbers of requests and logs the statistics of the times taken to `app.log` file.
     ```bash
     python benchmark.py
@@ -119,12 +120,14 @@ To stop the server
     ```bash
     docker stop 065d244716e0ff6848ce38fb2f1e20e67616384783b5a47a7d8fe151fceb5686
     ```
+
 Replace `065d244716e0ff6848ce38fb2f1e20e67616384783b5a47a7d8fe151fceb5686` with your container-id
 
 
 ## API Endpoints
 
 - **GET** `/`: Returns a message indicating the service is up and running
+
 - **GET** `/restaurant`: Returns a list of restaurant IDs that can deliver to the user's location
 
 ## Design Choices
@@ -133,7 +136,7 @@ Replace `065d244716e0ff6848ce38fb2f1e20e67616384783b5a47a7d8fe151fceb5686` with 
 
 - **Caching**: Results for frequently accessed locations are cached using `lru_cache` to reduce latency.
 
-- **Background Updates**: A background thread periodically reloads restaurant data from the CSV file to ensure the information is up-to-date.
+- **Background Updates**: A background thread periodically reloads (every 6 hours) restaurant data from the CSV file to ensure the information is up-to-date.
 
 - **Asynchronous Context**: The `lifespan` context manager is used to handle the initialization and cleanup of resources, such as loading the CSV data and starting the background thread.
 
@@ -176,5 +179,5 @@ Below are the benchmark results for CSV loading performance
 - **Max CSV Load time:** 24,030.62 ms  
 
 
-#### Log Insights
-You can refer to the app.log file for a detailed record of these benchmark results, which were tested on my local machine.
+### Log Insights
+You can refer to the `app.log` file for a detailed record of these benchmark results, which were tested on my local machine.

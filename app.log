@@ -1,0 +1,402 @@
+2025-02-06 20:58:17 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 20:58:20 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 20:58:20 [INFO] app: Execution finished: function=load_csv_data | duration=8856.01 ms
+2025-02-06 20:58:47 [INFO] benchmark: Statistic for 1000 api requests
+2025-02-06 20:58:47 [INFO] benchmark: Mean response time: 3.23 ms
+2025-02-06 20:58:47 [INFO] benchmark: Median response time: 2.98 ms
+2025-02-06 20:58:47 [INFO] benchmark: Mode response time: 2.87 ms
+2025-02-06 20:58:47 [INFO] benchmark: Min response time: 2.21 ms
+2025-02-06 20:58:47 [INFO] benchmark: Max response time: 36.92 ms
+2025-02-06 20:58:50 [INFO] benchmark: Statistic for 1000 api requests
+2025-02-06 20:58:50 [INFO] benchmark: Mean response time: 3.19 ms
+2025-02-06 20:58:50 [INFO] benchmark: Median response time: 2.94 ms
+2025-02-06 20:58:50 [INFO] benchmark: Mode response time: 3.11 ms
+2025-02-06 20:58:50 [INFO] benchmark: Min response time: 2.57 ms
+2025-02-06 20:58:50 [INFO] benchmark: Max response time: 37.04 ms
+2025-02-06 20:58:53 [INFO] benchmark: Statistic for 1000 api requests
+2025-02-06 20:58:53 [INFO] benchmark: Mean response time: 3.27 ms
+2025-02-06 20:58:53 [INFO] benchmark: Median response time: 3.00 ms
+2025-02-06 20:58:53 [INFO] benchmark: Mode response time: 3.42 ms
+2025-02-06 20:58:53 [INFO] benchmark: Min response time: 2.48 ms
+2025-02-06 20:58:53 [INFO] benchmark: Max response time: 31.20 ms
+2025-02-06 20:58:53 [INFO] benchmark: Statistic for 100 api requests
+2025-02-06 20:58:53 [INFO] benchmark: Mean response time: 3.20 ms
+2025-02-06 20:58:53 [INFO] benchmark: Median response time: 3.11 ms
+2025-02-06 20:58:53 [INFO] benchmark: Mode response time: 3.43 ms
+2025-02-06 20:58:53 [INFO] benchmark: Min response time: 2.25 ms
+2025-02-06 20:58:53 [INFO] benchmark: Max response time: 6.78 ms
+2025-02-06 20:59:00 [INFO] benchmark: Statistic for 2000 api requests
+2025-02-06 20:59:00 [INFO] benchmark: Mean response time: 3.24 ms
+2025-02-06 20:59:00 [INFO] benchmark: Median response time: 2.97 ms
+2025-02-06 20:59:00 [INFO] benchmark: Mode response time: 2.91 ms
+2025-02-06 20:59:00 [INFO] benchmark: Min response time: 2.20 ms
+2025-02-06 20:59:00 [INFO] benchmark: Max response time: 37.12 ms
+2025-02-06 20:59:17 [INFO] benchmark: Statistic for 5000 api requests
+2025-02-06 20:59:17 [INFO] benchmark: Mean response time: 3.44 ms
+2025-02-06 20:59:17 [INFO] benchmark: Median response time: 3.04 ms
+2025-02-06 20:59:17 [INFO] benchmark: Mode response time: 2.92 ms
+2025-02-06 20:59:17 [INFO] benchmark: Min response time: 2.21 ms
+2025-02-06 20:59:17 [INFO] benchmark: Max response time: 46.16 ms
+2025-02-06 20:59:54 [INFO] benchmark: Statistic for 10000 api requests
+2025-02-06 20:59:54 [INFO] benchmark: Mean response time: 3.68 ms
+2025-02-06 20:59:54 [INFO] benchmark: Median response time: 3.17 ms
+2025-02-06 20:59:54 [INFO] benchmark: Mode response time: 2.85 ms
+2025-02-06 20:59:54 [INFO] benchmark: Min response time: 2.17 ms
+2025-02-06 20:59:54 [INFO] benchmark: Max response time: 93.72 ms
+2025-02-06 20:59:54 [INFO] benchmark: Statistic for 20 api requests
+2025-02-06 20:59:54 [INFO] benchmark: Mean response time: 3.54 ms
+2025-02-06 20:59:54 [INFO] benchmark: Median response time: 3.59 ms
+2025-02-06 20:59:54 [INFO] benchmark: Mode response time: 3.51 ms
+2025-02-06 20:59:54 [INFO] benchmark: Min response time: 2.45 ms
+2025-02-06 20:59:54 [INFO] benchmark: Max response time: 4.58 ms
+2025-02-06 21:00:00 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:00:03 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:00:03 [INFO] app: Execution finished: function=load_csv_data | duration=8600.92 ms
+2025-02-06 21:00:09 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:00:11 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:00:11 [INFO] app: Execution finished: function=load_csv_data | duration=8348.49 ms
+2025-02-06 21:00:32 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:00:34 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:00:34 [INFO] app: Execution finished: function=load_csv_data | duration=23013.23 ms
+2025-02-06 21:00:52 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:00:54 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:00:54 [INFO] app: Execution finished: function=load_csv_data | duration=20201.59 ms
+2025-02-06 21:01:00 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:01:03 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:01:03 [INFO] app: Execution finished: function=load_csv_data | duration=8333.81 ms
+2025-02-06 21:01:09 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:01:11 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:01:11 [INFO] app: Execution finished: function=load_csv_data | duration=8475.34 ms
+2025-02-06 21:01:17 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:01:20 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:01:20 [INFO] app: Execution finished: function=load_csv_data | duration=8659.96 ms
+2025-02-06 21:01:25 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:01:28 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:01:28 [INFO] app: Execution finished: function=load_csv_data | duration=8202.60 ms
+2025-02-06 21:01:45 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:01:47 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:01:47 [INFO] app: Execution finished: function=load_csv_data | duration=19498.81 ms
+2025-02-06 21:01:54 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:01:56 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:01:56 [INFO] app: Execution finished: function=load_csv_data | duration=8543.75 ms
+2025-02-06 21:02:02 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:02:04 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:02:04 [INFO] app: Execution finished: function=load_csv_data | duration=8521.30 ms
+2025-02-06 21:02:10 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:02:13 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:02:13 [INFO] app: Execution finished: function=load_csv_data | duration=8312.61 ms
+2025-02-06 21:02:19 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:02:21 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:02:21 [INFO] app: Execution finished: function=load_csv_data | duration=8401.18 ms
+2025-02-06 21:02:27 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:02:30 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:02:30 [INFO] app: Execution finished: function=load_csv_data | duration=8328.84 ms
+2025-02-06 21:02:36 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:02:38 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:02:38 [INFO] app: Execution finished: function=load_csv_data | duration=8520.41 ms
+2025-02-06 21:02:59 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:03:01 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:03:01 [INFO] app: Execution finished: function=load_csv_data | duration=22940.76 ms
+2025-02-06 21:03:07 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:03:10 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:03:10 [INFO] app: Execution finished: function=load_csv_data | duration=8540.02 ms
+2025-02-06 21:03:15 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:03:18 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:03:18 [INFO] app: Execution finished: function=load_csv_data | duration=8362.68 ms
+2025-02-06 21:03:24 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:03:26 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:03:26 [INFO] app: Execution finished: function=load_csv_data | duration=8335.35 ms
+2025-02-06 21:03:32 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:03:35 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:03:35 [INFO] app: Execution finished: function=load_csv_data | duration=8330.92 ms
+2025-02-06 21:03:40 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:03:43 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:03:43 [INFO] app: Execution finished: function=load_csv_data | duration=8168.46 ms
+2025-02-06 21:03:49 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:03:51 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:03:51 [INFO] app: Execution finished: function=load_csv_data | duration=8135.34 ms
+2025-02-06 21:03:57 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:03:59 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:03:59 [INFO] app: Execution finished: function=load_csv_data | duration=8209.40 ms
+2025-02-06 21:04:05 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:04:07 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:04:07 [INFO] app: Execution finished: function=load_csv_data | duration=8270.51 ms
+2025-02-06 21:04:13 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:04:16 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:04:16 [INFO] app: Execution finished: function=load_csv_data | duration=8253.58 ms
+2025-02-06 21:04:22 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:04:24 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:04:24 [INFO] app: Execution finished: function=load_csv_data | duration=8366.11 ms
+2025-02-06 21:04:30 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:04:32 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:04:32 [INFO] app: Execution finished: function=load_csv_data | duration=8415.61 ms
+2025-02-06 21:04:38 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:04:41 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:04:41 [INFO] app: Execution finished: function=load_csv_data | duration=8343.25 ms
+2025-02-06 21:04:47 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:04:49 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:04:49 [INFO] app: Execution finished: function=load_csv_data | duration=8702.57 ms
+2025-02-06 21:04:55 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:04:58 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:04:58 [INFO] app: Execution finished: function=load_csv_data | duration=8209.20 ms
+2025-02-06 21:05:04 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:05:06 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:05:06 [INFO] app: Execution finished: function=load_csv_data | duration=8220.12 ms
+2025-02-06 21:05:12 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:05:14 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:05:14 [INFO] app: Execution finished: function=load_csv_data | duration=8451.67 ms
+2025-02-06 21:05:20 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:05:23 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:05:23 [INFO] app: Execution finished: function=load_csv_data | duration=8243.69 ms
+2025-02-06 21:05:29 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:05:31 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:05:31 [INFO] app: Execution finished: function=load_csv_data | duration=8321.14 ms
+2025-02-06 21:05:37 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:05:39 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:05:39 [INFO] app: Execution finished: function=load_csv_data | duration=8354.61 ms
+2025-02-06 21:05:45 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:05:47 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:05:47 [INFO] app: Execution finished: function=load_csv_data | duration=8283.17 ms
+2025-02-06 21:05:53 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:05:56 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:05:56 [INFO] app: Execution finished: function=load_csv_data | duration=8353.91 ms
+2025-02-06 21:06:02 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:06:04 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:06:04 [INFO] app: Execution finished: function=load_csv_data | duration=8220.86 ms
+2025-02-06 21:06:10 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:06:13 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:06:13 [INFO] app: Execution finished: function=load_csv_data | duration=8466.24 ms
+2025-02-06 21:06:31 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:06:34 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:06:34 [INFO] app: Execution finished: function=load_csv_data | duration=21274.49 ms
+2025-02-06 21:06:40 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:06:42 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:06:42 [INFO] app: Execution finished: function=load_csv_data | duration=8507.26 ms
+2025-02-06 21:06:48 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:06:51 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:06:51 [INFO] app: Execution finished: function=load_csv_data | duration=8314.55 ms
+2025-02-06 21:06:57 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:06:59 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:06:59 [INFO] app: Execution finished: function=load_csv_data | duration=8213.26 ms
+2025-02-06 21:07:07 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:07:10 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:07:10 [INFO] app: Execution finished: function=load_csv_data | duration=10707.04 ms
+2025-02-06 21:07:16 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:07:18 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:07:18 [INFO] app: Execution finished: function=load_csv_data | duration=8356.92 ms
+2025-02-06 21:07:24 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:07:26 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:07:26 [INFO] app: Execution finished: function=load_csv_data | duration=8266.77 ms
+2025-02-06 21:07:32 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:07:35 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:07:35 [INFO] app: Execution finished: function=load_csv_data | duration=8337.37 ms
+2025-02-06 21:07:50 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:07:52 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:07:52 [INFO] app: Execution finished: function=load_csv_data | duration=17980.44 ms
+2025-02-06 21:07:58 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:08:01 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:08:01 [INFO] app: Execution finished: function=load_csv_data | duration=8303.06 ms
+2025-02-06 21:08:07 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:08:09 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:08:09 [INFO] app: Execution finished: function=load_csv_data | duration=8269.88 ms
+2025-02-06 21:08:22 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:08:25 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:08:25 [INFO] app: Execution finished: function=load_csv_data | duration=15607.98 ms
+2025-02-06 21:08:31 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:08:33 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:08:33 [INFO] app: Execution finished: function=load_csv_data | duration=8390.25 ms
+2025-02-06 21:08:39 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:08:41 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:08:41 [INFO] app: Execution finished: function=load_csv_data | duration=8367.55 ms
+2025-02-06 21:08:47 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:08:50 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:08:50 [INFO] app: Execution finished: function=load_csv_data | duration=8337.81 ms
+2025-02-06 21:08:56 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:08:58 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:08:58 [INFO] app: Execution finished: function=load_csv_data | duration=8127.59 ms
+2025-02-06 21:09:16 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:09:18 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:09:18 [INFO] app: Execution finished: function=load_csv_data | duration=20219.65 ms
+2025-02-06 21:09:34 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:09:36 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:09:36 [INFO] app: Execution finished: function=load_csv_data | duration=18110.79 ms
+2025-02-06 21:09:57 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:09:59 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:09:59 [INFO] app: Execution finished: function=load_csv_data | duration=23206.36 ms
+2025-02-06 21:10:06 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:10:08 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:10:08 [INFO] app: Execution finished: function=load_csv_data | duration=8436.01 ms
+2025-02-06 21:10:14 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:10:16 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:10:16 [INFO] app: Execution finished: function=load_csv_data | duration=8330.43 ms
+2025-02-06 21:10:22 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:10:25 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:10:25 [INFO] app: Execution finished: function=load_csv_data | duration=8492.83 ms
+2025-02-06 21:10:31 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:10:33 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:10:33 [INFO] app: Execution finished: function=load_csv_data | duration=8427.22 ms
+2025-02-06 21:10:47 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:10:49 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:10:49 [INFO] app: Execution finished: function=load_csv_data | duration=15831.81 ms
+2025-02-06 21:11:10 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:11:13 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:11:13 [INFO] app: Execution finished: function=load_csv_data | duration=23753.68 ms
+2025-02-06 21:11:19 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:11:21 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:11:21 [INFO] app: Execution finished: function=load_csv_data | duration=8331.62 ms
+2025-02-06 21:11:35 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:11:37 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:11:37 [INFO] app: Execution finished: function=load_csv_data | duration=15875.62 ms
+2025-02-06 21:11:43 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:11:45 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:11:45 [INFO] app: Execution finished: function=load_csv_data | duration=8252.35 ms
+2025-02-06 21:11:51 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:11:54 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:11:54 [INFO] app: Execution finished: function=load_csv_data | duration=8527.86 ms
+2025-02-06 21:12:00 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:12:02 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:12:02 [INFO] app: Execution finished: function=load_csv_data | duration=8266.44 ms
+2025-02-06 21:12:08 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:12:10 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:12:10 [INFO] app: Execution finished: function=load_csv_data | duration=8368.52 ms
+2025-02-06 21:12:17 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:12:19 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:12:19 [INFO] app: Execution finished: function=load_csv_data | duration=8663.20 ms
+2025-02-06 21:12:40 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:12:42 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:12:42 [INFO] app: Execution finished: function=load_csv_data | duration=22943.42 ms
+2025-02-06 21:13:04 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:13:06 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:13:06 [INFO] app: Execution finished: function=load_csv_data | duration=24030.55 ms
+2025-02-06 21:13:27 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:13:29 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:13:29 [INFO] app: Execution finished: function=load_csv_data | duration=23461.57 ms
+2025-02-06 21:13:38 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:13:40 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:13:40 [INFO] app: Execution finished: function=load_csv_data | duration=10428.83 ms
+2025-02-06 21:13:46 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:13:48 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:13:48 [INFO] app: Execution finished: function=load_csv_data | duration=8389.86 ms
+2025-02-06 21:14:08 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:14:10 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:14:10 [INFO] app: Execution finished: function=load_csv_data | duration=21989.65 ms
+2025-02-06 21:14:16 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:14:19 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:14:19 [INFO] app: Execution finished: function=load_csv_data | duration=8731.82 ms
+2025-02-06 21:14:25 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:14:27 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:14:27 [INFO] app: Execution finished: function=load_csv_data | duration=8403.35 ms
+2025-02-06 21:14:34 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:14:36 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:14:36 [INFO] app: Execution finished: function=load_csv_data | duration=8648.97 ms
+2025-02-06 21:14:42 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:14:44 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:14:44 [INFO] app: Execution finished: function=load_csv_data | duration=8222.61 ms
+2025-02-06 21:14:50 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:14:53 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:14:53 [INFO] app: Execution finished: function=load_csv_data | duration=8490.24 ms
+2025-02-06 21:14:59 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:15:01 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:15:01 [INFO] app: Execution finished: function=load_csv_data | duration=8569.62 ms
+2025-02-06 21:15:07 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:15:10 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:15:10 [INFO] app: Execution finished: function=load_csv_data | duration=8391.21 ms
+2025-02-06 21:15:16 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:15:18 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:15:18 [INFO] app: Execution finished: function=load_csv_data | duration=8311.05 ms
+2025-02-06 21:15:34 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:15:37 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:15:37 [INFO] app: Execution finished: function=load_csv_data | duration=18505.69 ms
+2025-02-06 21:15:42 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:15:45 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:15:45 [INFO] app: Execution finished: function=load_csv_data | duration=8220.29 ms
+2025-02-06 21:15:51 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:15:53 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:15:53 [INFO] app: Execution finished: function=load_csv_data | duration=8235.04 ms
+2025-02-06 21:16:08 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:16:11 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:16:11 [INFO] app: Execution finished: function=load_csv_data | duration=17662.76 ms
+2025-02-06 21:16:24 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:16:26 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:16:26 [INFO] app: Execution finished: function=load_csv_data | duration=15707.75 ms
+2025-02-06 21:16:32 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:16:34 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:16:34 [INFO] app: Execution finished: function=load_csv_data | duration=8124.45 ms
+2025-02-06 21:16:40 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:16:43 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:16:43 [INFO] app: Execution finished: function=load_csv_data | duration=8353.81 ms
+2025-02-06 21:16:49 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:16:51 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:16:51 [INFO] app: Execution finished: function=load_csv_data | duration=8370.68 ms
+2025-02-06 21:16:57 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:17:00 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:17:00 [INFO] app: Execution finished: function=load_csv_data | duration=8329.47 ms
+2025-02-06 21:17:05 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:17:08 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:17:08 [INFO] app: Execution finished: function=load_csv_data | duration=8261.52 ms
+2025-02-06 21:17:26 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:17:29 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:17:29 [INFO] app: Execution finished: function=load_csv_data | duration=20746.26 ms
+2025-02-06 21:17:47 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:17:49 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:17:49 [INFO] app: Execution finished: function=load_csv_data | duration=20734.79 ms
+2025-02-06 21:17:55 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:17:57 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:17:57 [INFO] app: Execution finished: function=load_csv_data | duration=8173.24 ms
+2025-02-06 21:18:03 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:18:06 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:18:06 [INFO] app: Execution finished: function=load_csv_data | duration=8269.12 ms
+2025-02-06 21:18:12 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:18:14 [INFO] app: Loaded 73909 restaurants.
+2025-02-06 21:18:14 [INFO] app: Execution finished: function=load_csv_data | duration=8322.83 ms
+2025-02-06 21:18:14 [INFO] benchmark: Statistics for 100 <function=load_csv_data> calls
+2025-02-06 21:18:14 [INFO] benchmark: Mean CSV Load time: 10999.57 ms
+2025-02-06 21:18:14 [INFO] benchmark: Median CSV Load time: 8380.38 ms
+2025-02-06 21:18:14 [INFO] benchmark: Mode CSV Load time: 8601.17 ms
+2025-02-06 21:18:14 [INFO] benchmark: Min CSV Load time: 8124.51 ms
+2025-02-06 21:18:14 [INFO] benchmark: Max CSV Load time: 24030.62 ms
+2025-02-06 21:18:37 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:18:39 [INFO] app: Loaded 73909 restaurants
+2025-02-06 21:18:39 [INFO] app: Execution finished: function=load_csv_data | duration=8593.39 ms
+2025-02-06 21:18:58 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:19:00 [INFO] app: Loaded 73909 restaurants
+2025-02-06 21:19:00 [INFO] app: Execution finished: function=load_csv_data | duration=8653.80 ms
+2025-02-06 21:25:18 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:25:20 [INFO] app: Loaded 73909 restaurants
+2025-02-06 21:25:20 [INFO] app: Execution finished: function=load_csv_data | duration=8640.30 ms
+2025-02-06 21:34:04 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:34:07 [INFO] app: Loaded 73909 restaurants
+2025-02-06 21:34:07 [INFO] app: Execution finished: function=load_csv_data | duration=13624.51 ms
+2025-02-06 21:34:29 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:34:31 [INFO] app: Loaded 73909 restaurants
+2025-02-06 21:34:31 [INFO] app: Execution finished: function=load_csv_data | duration=8459.88 ms
+2025-02-06 21:34:40 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:34:42 [INFO] app: Loaded 73909 restaurants
+2025-02-06 21:34:42 [INFO] app: Execution finished: function=load_csv_data | duration=8711.77 ms
+2025-02-06 21:35:05 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:35:07 [INFO] app: Loaded 73909 restaurants
+2025-02-06 21:35:07 [INFO] app: Execution finished: function=load_csv_data | duration=24066.05 ms
+2025-02-06 21:35:15 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-06 21:35:17 [INFO] app: Loaded 73909 restaurants
+2025-02-06 21:35:17 [INFO] app: Execution finished: function=load_csv_data | duration=8541.32 ms
+2025-02-06 21:38:14 [INFO] benchmark: Statistic for 50000 api requests
+2025-02-06 21:38:14 [INFO] benchmark: Mean response time: 3.53 ms
+2025-02-06 21:38:14 [INFO] benchmark: Median response time: 3.08 ms
+2025-02-06 21:38:14 [INFO] benchmark: Mode response time: 2.95 ms
+2025-02-06 21:38:14 [INFO] benchmark: Min response time: 2.03 ms
+2025-02-06 21:38:14 [INFO] benchmark: Max response time: 80.18 ms
+2025-02-06 21:39:27 [INFO] benchmark: Statistic for 20000 api requests
+2025-02-06 21:39:27 [INFO] benchmark: Mean response time: 3.68 ms
+2025-02-06 21:39:27 [INFO] benchmark: Median response time: 3.30 ms
+2025-02-06 21:39:27 [INFO] benchmark: Mode response time: 3.24 ms
+2025-02-06 21:39:27 [INFO] benchmark: Min response time: 2.01 ms
+2025-02-06 21:39:27 [INFO] benchmark: Max response time: 99.46 ms
+2025-02-06 21:45:38 [INFO] benchmark: Statistic for 100000 api requests
+2025-02-06 21:45:38 [INFO] benchmark: Mean response time: 3.71 ms
+2025-02-06 21:45:38 [INFO] benchmark: Median response time: 3.32 ms
+2025-02-06 21:45:38 [INFO] benchmark: Mode response time: 3.47 ms
+2025-02-06 21:45:38 [INFO] benchmark: Min response time: 1.99 ms
+2025-02-06 21:45:38 [INFO] benchmark: Max response time: 98.71 ms
+2025-02-07 00:53:12 [WARNING] app: Error parsing row 43562: could not convert string to float: ''
+2025-02-07 00:53:15 [INFO] app: Loaded 73909 restaurants
+2025-02-07 00:53:15 [INFO] app: Execution finished: function=load_csv_data | duration=13508.04 ms
