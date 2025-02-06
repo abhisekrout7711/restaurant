@@ -6,13 +6,20 @@ import requests
 
 # Local Imports
 from app.logger import CustomLogger
+from app.csv_loader import CSVLoader
 from app.utils import get_statistics
+
 
 logger = CustomLogger.get_logger(name="benchmark")
 
 API_URL = "http://0.0.0.0:8080/restaurants"
 
-def run_benchmark(latitude: float, longitude: float, n: int = 100):
+
+def api_response_benchmark(latitude: float, longitude: float, n: int = 100):
+    """
+    Benchmark the time taken to fetch the API response from the given coordinates.
+    Make n requests to the API and log the statistics of the times taken.
+    """
     times = []
     params = {"latitude": latitude, "longitude": longitude}
 
@@ -29,7 +36,7 @@ def run_benchmark(latitude: float, longitude: float, n: int = 100):
 
     # Log benchmark results
     stats = get_statistics(times)
-    logger.info(f"Performed {n} requests.")
+    logger.info(f"Made {n} synchronous api requests")
     logger.info(f"Mean response time: {stats["mean"]:.2f} ms")
     logger.info(f"Median response time: {stats["median"]:.2f} ms")
     logger.info(f"Mode response time: {stats["mode"]:.2f} ms")
@@ -37,10 +44,53 @@ def run_benchmark(latitude: float, longitude: float, n: int = 100):
     logger.info(f"Max response time: {stats["max"]:.2f} ms")
 
 
+def csv_loader_benchmark(n: int = 100):
+    """
+    Benchmark the time taken to load the CSV file and populate the restaurants and spatial index.
+
+    The function loads the CSV file, populates the restaurants and spatial index, and measures the time taken.
+    This is done n times, and the statistics of the times are logged.
+
+    Parameters:
+    n (int): Number of times to call the function. Default is 100.
+    """
+    times = []
+    for _ in range(n):
+        start = time.perf_counter()
+        csv_loader = CSVLoader()
+        csv_loader.load_csv_data()
+        end = time.perf_counter()
+        elapsed = (end - start) * 1000
+        times.append(elapsed)
+
+    # Log benchmark results
+    stats = get_statistics(times)
+    logger.info(f"Called function=load_csv_data {n} times")
+    logger.info(f"Mean CSV Load time: {stats["mean"]:.2f} ms")
+    logger.info(f"Median CSV Load time: {stats["median"]:.2f} ms")
+    logger.info(f"Mode CSV Load time: {stats["mode"]:.2f} ms")
+    logger.info(f"Min CSV Load time: {stats["min"]:.2f} ms")
+    logger.info(f"Max CSV Load time: {stats["max"]:.2f} ms")
+
+
 if __name__ == "__main__":
-    # Benchmark with a sample location
-    run_benchmark(latitude=51.14, longitude=6.451, n=1000)
+    # Benchmark api response time with sample coordinates for syncronous requests
+    api_response_benchmark(latitude=51.14, longitude=6.451, n=1000)
     print("\n")
-    run_benchmark(latitude=51.145, longitude=6.45, n=1000)
+    api_response_benchmark(latitude=51.145, longitude=6.45, n=1000)
     print("\n")
-    run_benchmark(latitude=51.1461, longitude=6.4510, n=1000)
+    api_response_benchmark(latitude=51.1461, longitude=6.4510, n=1000)
+    print("\n")
+    api_response_benchmark(latitude=51.13756818172762, longitude=6.459270183225865, n=100)
+    print("\n")
+    api_response_benchmark(latitude=51.14308790449917, longitude=6.448960987905538, n=2000)
+    print("\n")
+    api_response_benchmark(latitude=51.146114515692084, longitude=6.458783165372077, n=5000)
+    print("\n")
+    api_response_benchmark(latitude=51.155634911736605, longitude=6.455252345087498, n=10000)
+    print("\n")
+    api_response_benchmark(latitude=51.13611075535575, longitude=6.44490406101732, n=20)
+
+
+    # Benchmark CSV loader time
+    csv_loader_benchmark(n=100)
