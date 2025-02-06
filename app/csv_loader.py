@@ -11,7 +11,7 @@ from fastapi import HTTPException
 # Local Imports
 from app.config import CSV_URL, CSV_UPDATE_INTERVAL_SECONDS
 from app.models import Restaurant
-from app.utils import get_bounding_box
+from app.utils import get_bounding_box, time_it
 from app.logger import CustomLogger
 
 logger = CustomLogger.get_logger()
@@ -29,6 +29,7 @@ class CSVLoader:
         
         return cls.__instance
 
+    @time_it
     def load_csv_data(self):
         """Load the CSV file from the URL and update the restaurants and spatial_index instance variables."""
         try:
