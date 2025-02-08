@@ -68,6 +68,10 @@ Built with FastAPI, this high-performance API ensures quick responses and includ
     python app/main.py
     ```
 
+    ```bash
+    PYTHONPATH=$(pwd) python app/main.py
+    ```
+
 OR
 
 2. Using uvicorn

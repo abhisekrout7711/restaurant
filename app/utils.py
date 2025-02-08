@@ -49,6 +49,7 @@ def get_bounding_box(lat: float, lon: float, radius_km: float) -> Tuple[float, f
     Return bounding box (minx, miny, maxx, maxy) for a circle around (lat, lon)
     Note: we approximate 1 degree latitude ~111 km and adjust longitude by cos(latitude).
     """
+    radius_km += 0.15 * radius_km # Added 15% buffer in order to reduce false negatives
     delta_lat = radius_km / 111  # rough conversion km to degrees latitude
     delta_lon = radius_km / (111 * math.cos(math.radians(lat)) + 1e-6)  # add small epsilon to avoid division by zero
     return (lon - delta_lon, lat - delta_lat, lon + delta_lon, lat + delta_lat)
