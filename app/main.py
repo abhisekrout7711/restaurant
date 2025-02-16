@@ -57,8 +57,10 @@ def get_cached_response(latitude: float, longitude: float) -> dict:
         # Check distance
         if haversine_distance(latitude, longitude, restaurant.latitude, restaurant.longitude) <= restaurant.availability_radius:
             # Check if open
-            if is_open_now(restaurant):
-                matching_ids.append(restaurant.id)
+            # if is_open_now(restaurant):
+            matching_ids.append(restaurant.id)
+                # break
+
 
     return {"restaurant_count": len(matching_ids), "restaurant_ids": matching_ids}
 
